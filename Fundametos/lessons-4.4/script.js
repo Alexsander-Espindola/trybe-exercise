@@ -46,3 +46,4 @@ function canBePalindromo(word) {
 
 console.log(canBePalindromo('arara'));
 console.log(canBePalindromo('desenvolvimento'));
+
