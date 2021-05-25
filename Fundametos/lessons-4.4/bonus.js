@@ -1,5 +1,4 @@
-function numbersRomanos () {
-  let word = 'CDXLIX';
+function numbersRomanos (word) {
   word.split('');
   let numberRomano = null;
   for(let index = 0 ; index < word.length; index += 1 ){
@@ -10,10 +9,10 @@ function numbersRomanos () {
        } else {
          numberRomano += 1;
        }
-      break;
+       break;
       case 'V':
         numberRomano += 5;
-      break;
+        break;
       case 'X':
         if( word[index + 1] === 'L' || word[index + 1] === 'C'){
           numberRomano -= 10;
@@ -21,23 +20,26 @@ function numbersRomanos () {
           numberRomano += 10;
         }
   
-       break;
+        break;
       case 'L':
         numberRomano += 50;
   
-      break;  
+        break;  
       case 'C': 
         if(word[index + 1] === 'D' || word[index + 1] === 'M'){
           numberRomano -= 100;
         } else {
           numberRomano += 100;
         }
-       break;
+        break;
+
+      case 'D':
+        numberRomano +=500;
+        break
       case 'M':
         numberRomano += 1000;
   
-      break;
-  
+        break;
       default:
         console.log('Adicione um número Romano');
     }
@@ -48,7 +50,8 @@ console.log(numbersRomanos());
 
 function arrayOfNumbers () {
   let vector = [[1, 2], [3,4,5,6], [7,8,9,10]];
-  for (let evenNumber in vector){
-    console.log(evenNumber);
-  }
+
+  console.log(vector[0]);
+  console.log(vector[1]);
+  console.log(vector[2]);
 }
